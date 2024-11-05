@@ -1,0 +1,126 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #0c3c78, #1c56b2);
+    color: white;
+    text-align: center;
+}
+
+/* Estilos do cabeçalho */
+header {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    color: #e81e2c;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Botão */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #e81e2c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #d31727;
+}
+
+/* Seção de Informações */
+#informacoes {
+    width: 80%;
+    margin: 20px 0;
+}
+
+#informacoes h2 {
+    color: #e81e2c;
+    margin-bottom: 10px;
+}
+
+/* Seção do Escudo */
+#escudoSection.hidden {
+    display: none;
+}
+
+.escudo {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, #e81e2c 25%, #fff 25%, #fff 50%, #0c3c78 50%, #0c3c78 75%, #e81e2c 75%);
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    animation: girar 5s infinite linear;
+}
+
+.estrela {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(-50%, -50%);
+}
+
+/* Animação de rotação */
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Seção de Vídeos */
+.videos {
+    margin-top: 20px;
+    width: 80%;
+}
+
+.videos h2 {
+    margin-top: 15px;
+    color: #e81e2c;
+}
+
+.video-principal iframe,
+.video-galeria iframe {
+    width: 100%;
+    height: 315px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video-galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.video-galeria iframe {
+    width: 45%;
+}
